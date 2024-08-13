@@ -103,7 +103,7 @@ int main(void)
   {
     /* Programa para hacer parpadear leds en secuencia cada 200 ms */
 
-	  HAL_GPIO_WritePin(GPIOB, LED[3], GPIO_PIN_RESET); //Restablecer el estado del ultimo led del vector a 0
+	  HAL_GPIO_WritePin(GPIOB, LED[2], GPIO_PIN_RESET); //Restablecer el estado del ultimo led del vector a 0
 	  for (int i = 0; i < 3; i++)
 	 	  {
 	 		HAL_GPIO_WritePin(GPIOB, LED[i], GPIO_PIN_SET);
