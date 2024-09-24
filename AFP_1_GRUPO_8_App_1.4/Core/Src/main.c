@@ -18,7 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-
+#include <stdbool.h>
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -27,8 +27,10 @@
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
 typedef enum{				//Se definen dos constantes enum para las secuencias y se utiliza typedef para asignarle el alias secuencia
-	secuencia_normal=1,
-	secuencia_invertida=-1
+	secuencia_1=1,
+	secuencia_2=2,
+	secuencia_3=3,
+	secuencia_4=4
 } secuencia;
 /* USER CODE END PTD */
 
@@ -36,7 +38,7 @@ typedef enum{				//Se definen dos constantes enum para las secuencias y se utili
 /* USER CODE BEGIN PD */
 #define N 3 //variable N para definir el tamaño del vector LED
 int LED[N]={LD1_Pin, LD2_Pin, LD3_Pin}; 	/*Vector de leds*/
-secuencia estado_secuencia=secuencia_normal;  //el estado inicial sera la secuencia normal
+secuencia estado_secuencia=secuencia_1;  //el estado inicial sera la secuencia normal
 
 int estado_boton=0, estado_anterior=GPIO_PIN_RESET;		//Controlar si el boton esta presionado y si es que no mantuvo asi hasta que vuelva a controlarse el estado
 
@@ -53,7 +55,10 @@ UART_HandleTypeDef huart3;
 PCD_HandleTypeDef hpcd_USB_OTG_FS;
 
 /* USER CODE BEGIN PV */
-
+void secuencia1(void);
+void secuencia2(void);
+void secuencia3(void);
+void secuencia4(void);
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -63,28 +68,7 @@ static void MX_USART3_UART_Init(void);
 static void MX_USB_OTG_FS_PCD_Init(void);
 
 /* USER CODE BEGIN PFP */
-void encender_leds_normal(void){							/* Funciona para secuencia en orden ascendente del vector (Verde, Azul, Rojo)*/
 
-	HAL_GPIO_WritePin(GPIOB, LED[N-1], GPIO_PIN_RESET);
-	for (int i = 0; i < N; i++)
-	{
-		HAL_GPIO_WritePin(GPIOB, LED[i], GPIO_PIN_SET);
-		HAL_Delay(200);
-		HAL_GPIO_WritePin(GPIOB, LED[i], GPIO_PIN_RESET);
-		HAL_Delay(200);
-	}
-}
-
-void encender_leds_invertido(void){							/* Funciona para secuencia en orden descendente del vector (Rojo, Azul, Verde)*/
-
-	HAL_GPIO_WritePin(GPIOB, LED[0], GPIO_PIN_RESET);
-	for (int i=N-1; i>=0; i--){
-		HAL_GPIO_WritePin(GPIOB, LED[i], GPIO_PIN_SET);
-		HAL_Delay(200);
-		HAL_GPIO_WritePin(GPIOB, LED[i], GPIO_PIN_RESET);
-		HAL_Delay(200);
-	}
-}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -137,21 +121,33 @@ int main(void)
 
 	  if(estado_boton==GPIO_PIN_SET && estado_anterior==GPIO_PIN_RESET){	/*	-Cambia el estado de la secuencia
 		  	  	  	  	  	  	  	  	  	  	  	  	  	  	  	  	  	 	- Evita que alterne una y otra vez si se lo mantiene presionado*/
-		  	estado_secuencia=-estado_secuencia;								/*	Los valores para las 2 secuencias son 1 y -1*/
+		  	estado_secuencia=estado_secuencia+1; 							/*	Los valores para las 4 secuencias de 1 a 4*/
 
+		  	if(estado_secuencia==5){
+		  		estado_secuencia=1;											/* Cuando termina la secuencia 4 vuelve a la secuencia 1*/
+		  	}
+		  	HAL_GPIO_WritePin(GPIOB, LED[0] | LED[1]| LED[2], GPIO_PIN_RESET);
+		  	HAL_Delay(500);													//Apagamos los leds para visualizar el cambio de secuencia al presionar el boton
 	  }
 	  estado_anterior=estado_boton;											/* Guarda el si el boton esta pulsado o no cuando se hizo el control*/
 
+	  /* Selecciona cual secuencia se ejecutara*/
+	  switch (estado_secuencia){
 
-	  switch (estado_secuencia){											/* Selecciona cual secuencia se ejecutara*/
-
-	  	  case -1:
-	  		  encender_leds_invertido();
-	  		  break;
 	  	  case 1:
-	  		  encender_leds_normal();
-	  		  break;
+	  		  	  	  secuencia1();
+	  		  	  	  break;
+	  	  case 2:
+	  		  		  secuencia2();
+	  		  		  break;
+	  	  case 3:
+	  		  		  secuencia3();
+	  		  		  break;
+	  	  case 4:
+	  		  		  secuencia4();
+	  		  		  break;
 	  }
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -329,6 +325,36 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 
+// Funcion para hacer parpadear simultaneamente todos los leds cada 100ms
+void secuencia1(void){
+
+	HAL_GPIO_TogglePin(GPIOB, LED[0] | LED[1]| LED[2]);
+	HAL_Delay(100);
+}
+
+// Funcion para hacer parpadear simultaneamente todos los leds cada 250ms
+void secuencia2(void){
+
+	HAL_GPIO_TogglePin(GPIOB, LED[0] | LED[1]| LED[2]);
+	HAL_Delay(250);
+
+}
+
+// Funcion para hacer parpadear simultaneamente todos los leds cada 500ms
+void secuencia3(){
+
+	HAL_GPIO_TogglePin(GPIOB, LED[0] | LED[1]| LED[2]);
+	HAL_Delay(500);
+
+}
+
+// Funcion para hacer parpadear simultaneamente todos los leds cada 1000ms
+void secuencia4(){
+
+	HAL_GPIO_TogglePin(GPIOB, LED[0] | LED[1]| LED[2]);
+	HAL_Delay(1000);
+
+}
 /* USER CODE END 4 */
 
 /**
