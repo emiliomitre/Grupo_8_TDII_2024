@@ -105,6 +105,8 @@ int main(void)
 
 		  	  toggleLed_GPIO(LED[i]);
 		  	  HAL_Delay(200);
+		  	  toggleLed_GPIO(LED[i]);
+		  	  HAL_Delay(200);
 
 	 	  }
 
