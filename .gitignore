@@ -9,7 +9,7 @@
 *.o
 *.ko
 *.obj
-*.elf
+
 
 # Linker output
 *.ilk
@@ -35,7 +35,7 @@
 # Executables
 *.exe
 *.out
-*.app
+
 *.i*86
 *.x86_64
 *.hex
@@ -56,23 +56,13 @@ Mkfile.old
 dkms.conf
 
 ### Eclipse ###
-.metadata
-bin/
-tmp/
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
-.settings/
-.loadpath
-.recommenders
+
 
 # External tool builders
 .externalToolBuilders/
 
 # Locally stored "Eclipse launch configurations"
-*.launch
+
 
 # PyDev specific (Python IDE for Eclipse)
 *.pydevproject

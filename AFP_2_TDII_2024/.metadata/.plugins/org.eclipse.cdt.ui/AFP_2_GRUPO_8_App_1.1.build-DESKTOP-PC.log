@@ -1,0 +1,17 @@
+12:01:09 **** Incremental Build of configuration Debug for project AFP_2_GRUPO_8_App_1.1 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F413xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"E:/mis cosas/Ingenieria/UTN-FRT/OneDrive - frt.utn.edu.ar/Repos/Grupo_8_TDII_2024_Notebook/Grupo_8_TDII_2024/AFP_2_TDII_2024/AFP_2_GRUPO_8_App_1.1/Drivers/API/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:108:27: warning: implicit declaration of function 'toogleLed_GPIO'; did you mean 'toggleLed_GPIO'? [-Wimplicit-function-declaration]
+  108 |                           toogleLed_GPIO(LED[i]);
+      |                           ^~~~~~~~~~~~~~
+      |                           toggleLed_GPIO
+arm-none-eabi-gcc -o "AFP_2_GRUPO_8_App_1.1.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\mis cosas\Ingenieria\UTN-FRT\OneDrive - frt.utn.edu.ar\Repos\Grupo_8_TDII_2024_Notebook\Grupo_8_TDII_2024\AFP_2_TDII_2024\AFP_2_GRUPO_8_App_1.1\STM32F413ZHTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AFP_2_GRUPO_8_App_1.1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `main':
+E:/mis cosas/Ingenieria/UTN-FRT/OneDrive - frt.utn.edu.ar/Repos/Grupo_8_TDII_2024_Notebook/Grupo_8_TDII_2024/AFP_2_TDII_2024/AFP_2_GRUPO_8_App_1.1/Debug/../Core/Src/main.c:108: undefined reference to `toogleLed_GPIO'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:65: AFP_2_GRUPO_8_App_1.1.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+
+12:01:10 Build Failed. 2 errors, 1 warnings. (took 1s.176ms)
+

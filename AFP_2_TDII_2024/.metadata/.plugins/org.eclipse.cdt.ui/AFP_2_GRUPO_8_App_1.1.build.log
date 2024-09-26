@@ -1,0 +1,10 @@
+12:02:09 **** Incremental Build of configuration Debug for project AFP_2_GRUPO_8_App_1.1 ****
+make -j12 all 
+arm-none-eabi-size  AFP_2_GRUPO_8_App_1.1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12012	     12	   2892	  14916	   3a44	AFP_2_GRUPO_8_App_1.1.elf
+Finished building: default.size.stdout
+ 
+
+12:02:09 Build Finished. 0 errors, 0 warnings. (took 515ms)
+
