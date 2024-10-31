@@ -1,0 +1,8 @@
+../Drivers/API/Src/API_GPIO.c:35:6:writeLedOn_GPIO	1
+../Drivers/API/Src/API_GPIO.c:45:6:writeLedOff_GPIO	1
+../Drivers/API/Src/API_GPIO.c:55:6:toggleLed_GPIO	1
+../Drivers/API/Src/API_GPIO.c:59:16:readButton_GPIO	1
+../Drivers/API/Src/API_GPIO.c:65:6:SystemClock_Config	3
+../Drivers/API/Src/API_GPIO.c:112:6:MX_USART3_UART_Init	2
+../Drivers/API/Src/API_GPIO.c:145:6:MX_USB_OTG_FS_PCD_Init	2
+../Drivers/API/Src/API_GPIO.c:180:6:MX_GPIO_Init	1
