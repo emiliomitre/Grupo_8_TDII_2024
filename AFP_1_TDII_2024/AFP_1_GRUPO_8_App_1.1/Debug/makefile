@@ -60,8 +60,8 @@ all: main-build
 main-build: AFP_1_GRUPO_8_App_1.1.elf secondary-outputs
 
 # Tool invocations
-AFP_1_GRUPO_8_App_1.1.elf AFP_1_GRUPO_8_App_1.1.map: $(OBJS) $(USER_OBJS) D:\STM32WorkSpace\Grupo_8_TDII_2024\AFP_1_TDII_2024\AFP_1_GRUPO_8_App_1.1\STM32F413ZHTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "AFP_1_GRUPO_8_App_1.1.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\STM32WorkSpace\Grupo_8_TDII_2024\AFP_1_TDII_2024\AFP_1_GRUPO_8_App_1.1\STM32F413ZHTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AFP_1_GRUPO_8_App_1.1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+AFP_1_GRUPO_8_App_1.1.elf AFP_1_GRUPO_8_App_1.1.map: $(OBJS) $(USER_OBJS) D:\Mis\ Cosas\Ingenieria\OneDrive\ -\ frt.utn.edu.ar\Repos\Grupo_8_TDII_2024_Notebook\Grupo_8_TDII_2024\AFP_1_TDII_2024\AFP_1_GRUPO_8_App_1.1\STM32F413ZHTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "AFP_1_GRUPO_8_App_1.1.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Mis Cosas\Ingenieria\OneDrive - frt.utn.edu.ar\Repos\Grupo_8_TDII_2024_Notebook\Grupo_8_TDII_2024\AFP_1_TDII_2024\AFP_1_GRUPO_8_App_1.1\STM32F413ZHTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AFP_1_GRUPO_8_App_1.1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

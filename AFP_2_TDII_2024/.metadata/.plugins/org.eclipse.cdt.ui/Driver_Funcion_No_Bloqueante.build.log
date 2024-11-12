@@ -1,0 +1,10 @@
+15:43:49 **** Incremental Build of configuration Debug for project Driver_Funcion_No_Bloqueante ****
+make -j16 all 
+arm-none-eabi-size  Driver_Funcion_No_Bloqueante.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12440	     24	   2920	  15384	   3c18	Driver_Funcion_No_Bloqueante.elf
+Finished building: default.size.stdout
+ 
+
+15:43:50 Build Finished. 0 errors, 0 warnings. (took 300ms)
+

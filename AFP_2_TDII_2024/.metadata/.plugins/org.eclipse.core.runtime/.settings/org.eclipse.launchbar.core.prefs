@@ -7,5 +7,7 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AFP_1_GRUPO_8_App_1.1\ Debug/ac
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AFP_1_GRUPO_8_App_1.1\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AFP_2_GRUPO_8_App_1.1\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AFP_2_GRUPO_8_App_1.1\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AFP_2_GRUPO_8_App_2.1\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AFP_2_GRUPO_8_App_2.1\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Ejemplo04_Driver_GPIO/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Ejemplo04_Driver_GPIO/activeLaunchTarget=null\:---

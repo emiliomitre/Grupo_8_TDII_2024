@@ -28,7 +28,7 @@ Drivers/API/Src/API_Delay.o: ../Drivers/API/Src/API_Delay.c \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h \
- D:/STM32WorkSpace/AFP_3_TDII_2024/AFP_3_Grupo_8_2024_App_3.3/Drivers/API/Inc/API_Delay.h
+ D:/Mis\ Cosas/Ingenieria/OneDrive\ -\ frt.utn.edu.ar/Repos/Grupo_8_TDII_2024_Notebook/Grupo_8_TDII_2024/AFP_3_TDII_2024/AFP_3_Grupo_8_2024_App_3.3/Drivers/API/Inc/API_Delay.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -59,4 +59,4 @@ Drivers/API/Src/API_Delay.o: ../Drivers/API/Src/API_Delay.c \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h:
-D:/STM32WorkSpace/AFP_3_TDII_2024/AFP_3_Grupo_8_2024_App_3.3/Drivers/API/Inc/API_Delay.h:
+D:/Mis\ Cosas/Ingenieria/OneDrive\ -\ frt.utn.edu.ar/Repos/Grupo_8_TDII_2024_Notebook/Grupo_8_TDII_2024/AFP_3_TDII_2024/AFP_3_Grupo_8_2024_App_3.3/Drivers/API/Inc/API_Delay.h:
