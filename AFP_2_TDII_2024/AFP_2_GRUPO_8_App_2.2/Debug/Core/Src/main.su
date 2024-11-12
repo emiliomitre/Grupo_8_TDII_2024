@@ -1,0 +1,4 @@
+../Core/Src/main.c:61:6:encender_leds_normal	16	static
+../Core/Src/main.c:74:6:encender_leds_invertido	16	static
+../Core/Src/main.c:95:5:main	8	static
+../Core/Src/main.c:165:6:Error_Handler	4	static,ignoring_inline_asm
