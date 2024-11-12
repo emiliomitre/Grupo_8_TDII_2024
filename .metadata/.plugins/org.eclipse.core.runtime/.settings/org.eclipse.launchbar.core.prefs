@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AFP_1_GRUPO_8_App_1.1 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AFP_1_GRUPO_8_App_1.2 Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AFP_2_GRUPO_8_App_2.1 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AFP_2_GRUPO_8_App_2.1,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AFP_2_GRUPO_8_App_2.2 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AFP_2_GRUPO_8_App_2.2,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AFP_2_GRUPO_8_App_2.3,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AFP_2_GRUPO_8_App_2.4 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AFP_2_GRUPO_8_App_2.4,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Ejemplo04_Driver_GPIO,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AFP_3_Grupo_8_2024_App_3.1,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AFP_3_Grupo_8_2024_App_3.2,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AFP_3_Grupo_8_2024_App_3.3,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AFP_1_GRUPO_8_App_1.1 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AFP_1_GRUPO_8_App_1.2 Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AFP_1_GRUPO_8_App_1.1\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AFP_1_GRUPO_8_App_1.1\ Debug/activeLaunchTarget=null\:---
