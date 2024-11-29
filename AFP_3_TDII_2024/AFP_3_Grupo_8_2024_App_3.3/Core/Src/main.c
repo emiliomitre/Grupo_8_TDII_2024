@@ -48,9 +48,10 @@
 uint16_t LED[N]={LD1_Pin, LD2_Pin, LD3_Pin};
 int led_actual=0;
 
-delay_t delay1, delay2, delay3;
+delay_t delay1, delay2, delay3, delay4, delay5;
 int estado_boton=0, estado_anterior=GPIO_PIN_RESET;		//Variables auxiliares para determinar el estado actual y el estado anterior
 int secuencia=0;
+int aux=0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -75,6 +76,8 @@ int main(void)
   delayInit(&delay1, 100);
   delayInit(&delay2, 150);
   delayInit(&delay3, 300);
+  delayInit(&delay4, 600);
+  delayInit(&delay5, 150);
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -114,6 +117,8 @@ int main(void)
 		  secuencia=(secuencia+1)%4;
 
 		  writeLedOff_GPIO(LED[0] | LED[1] | LED[2]);
+
+		  led_actual=0;
 	  }
 	  estado_anterior=estado_boton;
 
@@ -122,30 +127,10 @@ int main(void)
 	  {
 	  	  case 0:									//Secuencia 1 Parpadean en secuencia cada 150ms (verde, azul, rojo)
 
-	          if (delayRead(&delay2))
-	  	      {
-	  	  		  writeLedOn_GPIO(LED[0]);
-	  	  	  }
-	  	  	  if (delayRead(&delay2))
-	  	  	  {
-	  	  		  writeLedOff_GPIO(LED[0]);
-	  	  	  }
-	  	  	  if (delayRead(&delay2))
-	  	  	  {
-	  	  		  writeLedOn_GPIO(LED[1]);
-	  	  	  }
-	  	  	  if (delayRead(&delay2))
-	  	  	  {
-	  	  		  writeLedOff_GPIO(LED[1]);
-	  	  	  }
-	  	  	  if (delayRead(&delay2))
-	  	  	  {
-	  	  		  writeLedOn_GPIO(LED[2]);
-	  	  	  }
-	  	  	  if (delayRead(&delay2))
-	  	  	  {
-	  	  		  writeLedOff_GPIO(LED[2]);
-	  	  	  }
+	          if (delayRead(&delay2)){
+	        	  toggleLed_GPIO(LED[led_actual]);
+	          	  led_actual=(led_actual+1)%3;
+	          }
 	  	  	  break;
 
 	        case 1:									//Secuencia 2 Parpadean los tres en simultaneo cada 300ms
@@ -158,40 +143,34 @@ int main(void)
 	        case 2:									//Secuencia 3 Parpadean Led Verde 100ms, Led Azul 300ms y Led Rojo 600ms
 	  	  		if (delayRead(&delay1))
 	  	  		{
-	  	  			toggleLed_GPIO(LED[0] | LED[1] | LED[2]);
-	  	  		}
-	  	  		if (delayRead(&delay1)){
 	  	  			toggleLed_GPIO(LED[0]);
+	  	  		}
+	  	  		if (delayRead(&delay3)){
+	  	  			toggleLed_GPIO(LED[1]);
 	  	  		}
 
-	  	  		if (delayRead(&delay1)){
-	  	  			toggleLed_GPIO(LED[0]);
+	  	  		if (delayRead(&delay4)){
+	  	  			toggleLed_GPIO(LED[2]);
 	  	  		}
 
-	  	  		if (delayRead(&delay1))
-	  	  		{
-	  	  			toggleLed_GPIO(LED[0] | LED[1]);
-	  	  		}
-	  	  		if (delayRead(&delay1)){
-	  	  			toggleLed_GPIO(LED[0]);
-	  	  		}
-
-	  	  		if (delayRead(&delay1)){
-	  	  			toggleLed_GPIO(LED[0]);
-	  	  		}
 	  	  		break;
 
 	        case 3:									//Secuencia 4 Parpadea Verde y Rojo en simultaneo alternado con Azul cada 150ms
-	  	  		if (delayRead(&delay2))
+
+	        	if (delayRead(&delay2) && aux==0)
 	  	  		{
 	  	  			writeLedOff_GPIO(LED[1]);
 	  	  			writeLedOn_GPIO(LED[0] | LED[2]);
+	  	  			aux=1;
 	  	  		}
-	  	  		if (delayRead(&delay2))
+
+	  	  		if (delayRead(&delay5))
 	  	  		{
-	  	  			writeLedOff_GPIO(LED[0]	| LED[2]);
-	  	  			writeLedOn_GPIO(LED[1]);
+	  	  			  toggleLed_GPIO(LED[0]	| LED[2]);
+	  	  			  toggleLed_GPIO(LED[1]);
+
 	  	  		}
+
 	  	  		break;
 	  	}
 
