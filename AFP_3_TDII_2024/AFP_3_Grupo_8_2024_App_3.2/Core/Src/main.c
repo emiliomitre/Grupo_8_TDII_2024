@@ -134,6 +134,7 @@ int main(void)
 	  if(estado_boton==GPIO_PIN_SET && estado_anterior==GPIO_PIN_RESET){//	Cambia el estado de la secuencia - Evita que alterne una y otra vez si se lo mantiene presionado
 		  estado_secuencia=-estado_secuencia;							//	Los valores para las 2 secuencias son 1 y -1
 		  estado = ENCENDER_LED0;										// Reinicia al primer estado en cada cambio de secuencia
+		  writeLedOff_GPIO(LED[0] | LED[1] | LED[2]);
 	  }
 	  estado_anterior=estado_boton;										// Guarda el estado anterior para asegurar si el boton esta pulsado o no cuando se hizo el control
 
