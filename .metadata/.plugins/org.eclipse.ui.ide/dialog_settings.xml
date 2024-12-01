@@ -7,6 +7,9 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\STM32WorkSpace\Grupo_8_TDII_2024\AFP_3_TDII_2024\AFP_3_Grupo_8_2024_App_3.4"/>
+			<item value="D:\STM32WorkSpace\Grupo_8_TDII_2024\AFP_4_TDII_2024"/>
+			<item value="D:\STM32WorkSpace\Grupo_8_TDII_2024\AFP_2_TDII_2024"/>
 			<item value="D:\STM32WorkSpace\Grupo_8_TDII_2024\AFP_3_TDII_2024"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
@@ -27,7 +30,11 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\STM32WorkSpace\Grupo_8_TDII_2024\AFP_3_TDII_2024\AFP_3_Grupo_8_2024_App_3.1"/>
 			<item value="D:\STM32WorkSpace\Grupo_8_TDII_2024"/>
 		</list>
+	</section>
+	<section name="org.eclipse.ui.internal.ide.dialogs.ProjectContentsLocationArea">
+		<item key="OUTSIDE_LOCATION" value="D:\STM32WorkSpace\Grupo_8_TDII_2024\AFP_4_TDII_2024"/>
 	</section>
 </section>
