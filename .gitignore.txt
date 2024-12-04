@@ -56,7 +56,7 @@ Mkfile.old
 dkms.conf
 
 ### Eclipse ###
-.metadata
+/.metadata/
 bin/
 tmp/
 *.tmp
