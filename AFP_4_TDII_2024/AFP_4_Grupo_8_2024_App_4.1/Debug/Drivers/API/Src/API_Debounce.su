@@ -1,3 +1,0 @@
-../Drivers/API/Src/API_Debounce.c:27:8:readKey	16	static
-../Drivers/API/Src/API_Debounce.c:39:6:debounceFSM_init	8	static
-../Drivers/API/Src/API_Debounce.c:48:6:debounceFSM_update	16	static
