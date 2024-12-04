@@ -1,6 +1,6 @@
-../Core/Src/main.c:79:5:main	8	static
-../Core/Src/main.c:150:6:secuencia1	8	static
-../Core/Src/main.c:157:6:secuencia2	8	static
-../Core/Src/main.c:165:6:secuencia3	8	static
-../Core/Src/main.c:173:6:secuencia4	8	static
-../Core/Src/main.c:185:6:Error_Handler	4	static,ignoring_inline_asm
+../Core/Src/main.c:77:5:main	8	static
+../Core/Src/main.c:148:6:secuencia1	8	static
+../Core/Src/main.c:155:6:secuencia2	8	static
+../Core/Src/main.c:163:6:secuencia3	8	static
+../Core/Src/main.c:171:6:secuencia4	8	static
+../Core/Src/main.c:183:6:Error_Handler	4	static,ignoring_inline_asm

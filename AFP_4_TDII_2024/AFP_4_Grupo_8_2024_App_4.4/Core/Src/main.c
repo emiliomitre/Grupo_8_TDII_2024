@@ -13,9 +13,6 @@
   * in the root directory of this software component.
   * If no LICENSE file comes with this software, it is provided AS-IS.
   *
-  * Descripcion App4.2: Desarrolle una aplicacion que utilice el pulsador onboard de la placa de desarrollo para alternar entre dos secuencias diferentes.
-  * La aplicacion inicia con la secuencia de la App1.1 y, cuando se presione el pulsador, dicha secuencia debe invertirse y continuar, de manera que, cada
-  * vez que se presione el pulsador la secuencia actual se invierta. La aplicacion debe ser de caracter general.
   ***************************************************************************************************************************************************************
   */
 /* USER CODE END Header */
@@ -31,10 +28,10 @@
 
 /* Private typedef ---------------------------------------------------------------------------------------------------------------------------------------------*/
 typedef enum{				//Se definen dos constantes enum para las secuencias y se utiliza typedef para asignarle el alias secuencia
-	secuencia_1=1,
-	secuencia_2=2,
-	secuencia_3=3,
-	secuencia_4=4
+	secuencia_1=0,
+	secuencia_2=1,
+	secuencia_3=2,
+	secuencia_4=3
 } secuencia;
 /* USER CODE BEGIN PTD */
 
@@ -61,6 +58,7 @@ delay_t delay1, delay2, delay3, delay4;
 /* USER CODE BEGIN PFP */
 void SystemClock_Config(void);
 void MX_GPIO_Init(void);
+
 void secuencia1(void);
 void secuencia2(void);
 void secuencia3(void);
@@ -125,16 +123,16 @@ int main(void)
 	  /* Selecciona cual secuencia se ejecutara*/
 	  switch (estado_secuencia){
 
-	  	  case 1:
+	  	  case 0:
 	  		  	  	  secuencia1();
 	  		  	  	  break;
-	  	  case 2:
+	  	  case 1:
 	  		  		  secuencia2();
 	  		  		  break;
-	  	  case 3:
+	  	  case 2:
 	  		  		  secuencia3();
 	  		  		  break;
-	  	  case 4:
+	  	  case 3:
 	  		  		  secuencia4();
 	  		  		  break;
 	  }
