@@ -13,10 +13,16 @@
   * in the root directory of this software component.
   * If no LICENSE file comes with this software, it is provided AS-IS.
   *
+  * Descripcion App4.1: Originalmente la app1.1 no hace uso del boton de usuario
+  * de la placa de desarrollo, unicamente tiene 1 secuencia. Para poder implemen
+  * tar la API Antirebote agregaremos una secuencia 2 donde el LED_2 se mantenga
+  * encendido continuamente.
+  *
   ******************************************************************************
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------*/
 #include "main.h"
 #include "API_GPIO.h"
 #include "API_Delay.h"
@@ -33,7 +39,8 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define N 3 																		//variable N para definir el tamaño del vector LED
+#define N 3 																		// Variable N para definir el tamaño del vector LED
+#define LED_DELAY 200																// Retardo
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -43,16 +50,15 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-
-uint16_t 	LED[N]={LD1_Pin, LD2_Pin, LD3_Pin};
-
+uint16_t LED[N]={LD1_Pin, LD2_Pin, LD3_Pin};										//vector de leds
+int led_actual=0;
+delay_t delay;
+uint8_t estado_boton=0;
+uint8_t secuencia=0;																//Numero de secuencia
 /* USER CODE END PV */
-
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 void MX_GPIO_Init(void);
-void buttonPressed(void);
-void buttonReleased(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -69,7 +75,7 @@ bool_t readButton = true;
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
+	delayInit(&delay, LED_DELAY);		//200ms
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -99,16 +105,39 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  /* ---------------------------------------------------------------------------*/
   while (1){
 	/* Programa para hacer parpadear leds en secuencia cada 200 ms */
-	  readButton = readButton_GPIO(); 		// Lee estado actual del boton y lo guarda
+	  readButton = readButton_GPIO(); 												// Lee estado actual del boton y lo guarda
 	  debounceFSM_update(readButton);
+	  if(readKey()){
+		 secuencia=(secuencia+1)%2;													//cambia entre las 4 secuencias
+		 writeLedOff_GPIO(LED[0] | LED[1] | LED[2]);								//Se apagan todos los leds antes de comenzar una nueva secuencia
+	  }
+	  	  switch (secuencia)
+	 	  {
+	 	  	  case 0:																//Secuencia 1 Parpadean en secuencia cada 200ms (verde, azul, rojo)
+
+	 	          if (delayRead(&delay)){
+	 	        	  toggleLed_GPIO(LED[led_actual]);
+	 	          	  led_actual=(led_actual+1)%N;
+	 	          }
+	 	  	  	  break;
+
+	 	        case 1:																//Secuencia 2 Parpadean los tres en simultaneo cada 300ms
+	 	  	  		if (delayRead(&delay)){
+	 	  	  			 toggleLed_GPIO(LED[1]);
+	 	  	  		}
+	 	  	  		break;
+
+	 	  }
   }
-    /* USER CODE END WHILE */
+/* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
 
   /* USER CODE END 3 */
+
 }
 /* USER CODE BEGIN 4 */
 

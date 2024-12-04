@@ -43,10 +43,6 @@ typedef enum {
     ENCENDER_LED2,
     ESPERAR_LED2_OFF
 } estado_t;
-/*typedef enum{				//Se definen dos constantes enum para las secuencias y se utiliza typedef para asignarle el alias secuencia
-	sec_normal=1,
-	sec_invertida=-1
-} secuencia;*/
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -63,13 +59,13 @@ typedef enum {
 /* Private variables ---------------------------------------------------------*/
 estado_t estado=ENCENDER_LED0;  // Inicializo el orden de encendido de los LEDs
 
-int estado_boton=0, estado_anterior=GPIO_PIN_RESET;		//Variables auxiliares para determinar el estado actual y el estado anterior
-														//para luego comparar los 2 estados y verificar que no se este pulsando
-														//constantemente el pulsador.
+int estado_boton=0, estado_anterior=GPIO_PIN_RESET;								//Variables auxiliares para determinar el estado actual y el estado anterior
+																				//para luego comparar los 2 estados y verificar que no se este pulsando
+																				//constantemente el pulsador.
 // Define las secuencias de encendido de LEDs
-const int secuencia_normal[] = {0, 1, 2};     // LED Verde, Azul, Rojo
-const int secuencia_invertida[] = {2, 1, 0};  // LED Rojo, Azul, Verde
-int estado_secuencia=1;  						//el estado inicial sera la secuencia normal
+const int secuencia_normal[] = {0, 1, 2};     									// LED Verde, Azul, Rojo
+const int secuencia_invertida[] = {2, 1, 0};  									// LED Rojo, Azul, Verde
+int estado_secuencia=1;  														//el estado inicial sera la secuencia normal
 
 /* USER CODE BEGIN PV */
 uint16_t LED[N]={LD1_Pin, LD2_Pin, LD3_Pin};
@@ -120,8 +116,6 @@ int main(void)
 
   /* USER CODE BEGIN 2 */
   delayInit(&delaySecuencia, 200); //definir el tiempo de retardo
-  //delayInit(&delayLed2, 200); //definir el tiempo de retardo
-  //delayInit(&delayLed2, 200); //definir el tiempo de retardo
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -131,14 +125,14 @@ int main(void)
 /* Programa para prender secuencialmente leds 1,2,3 y de manera invertida 3,2,1. Alternando entre secuencias cuando se presiona el pulsador */
 	  estado_boton=readButton_GPIO();		//Compruebo si el boton esta presionado
 
-	  if(estado_boton==GPIO_PIN_SET && estado_anterior==GPIO_PIN_RESET){//	Cambia el estado de la secuencia - Evita que alterne una y otra vez si se lo mantiene presionado
-		  estado_secuencia=-estado_secuencia;							//	Los valores para las 2 secuencias son 1 y -1
-		  estado = ENCENDER_LED0;										// Reinicia al primer estado en cada cambio de secuencia
+	  if(estado_boton==GPIO_PIN_SET && estado_anterior==GPIO_PIN_RESET){		//	Cambia el estado de la secuencia - Evita que alterne una y otra vez si se lo mantiene presionado
+		  estado_secuencia=-estado_secuencia;									//	Los valores para las 2 secuencias son 1 y -1
+		  estado = ENCENDER_LED0;												// Reinicia al primer estado en cada cambio de secuencia
 		  writeLedOff_GPIO(LED[0] | LED[1] | LED[2]);
 	  }
-	  estado_anterior=estado_boton;										// Guarda el estado anterior para asegurar si el boton esta pulsado o no cuando se hizo el control
+	  estado_anterior=estado_boton;												// Guarda el estado anterior para asegurar si el boton esta pulsado o no cuando se hizo el control
 
-	  	  switch (estado_secuencia){										// Selecciona cual secuencia se ejecutara
+	  	  switch (estado_secuencia){											// Selecciona cual secuencia se ejecutara
 	  	  	  case 1:
 	  	  		  control_leds(secuencia_normal);
 	  	  		  break;
@@ -164,33 +158,33 @@ void control_leds(const int* secuencia){		/* Funciona para secuencia en orden as
          // Cambiar estado según la máquina de estados
          switch (estado) {
              case ENCENDER_LED0:
-            	 toggleLed_GPIO(LED[secuencia[0]]);  // Encender LED 0
+            	 toggleLed_GPIO(LED[secuencia[0]]); 						 // Encender LED 0
                  estado = ESPERAR_LED0_OFF;
                  break;
 
              case ESPERAR_LED0_OFF:
-            	 toggleLed_GPIO(LED[secuencia[0]]);  // Apagar LED 0
+            	 toggleLed_GPIO(LED[secuencia[0]]);  						// Apagar LED 0
                  estado = ENCENDER_LED1;
                  break;
 
              case ENCENDER_LED1:
-            	 toggleLed_GPIO(LED[secuencia[1]]);  // Encender LED 1
+            	 toggleLed_GPIO(LED[secuencia[1]]);  						// Encender LED 1
                  estado = ESPERAR_LED1_OFF;
                  break;
 
              case ESPERAR_LED1_OFF:
-            	 toggleLed_GPIO(LED[secuencia[1]]);  // Apagar LED 1
+            	 toggleLed_GPIO(LED[secuencia[1]]);  						// Apagar LED 1
                  estado = ENCENDER_LED2;
                  break;
 
              case ENCENDER_LED2:
-            	 toggleLed_GPIO(LED[secuencia[2]]);  // Encender LED 2
+            	 toggleLed_GPIO(LED[secuencia[2]]); 						// Encender LED 2
                  estado = ESPERAR_LED2_OFF;
                  break;
 
              case ESPERAR_LED2_OFF:
-            	 toggleLed_GPIO(LED[secuencia[2]]);  // Apagar LED 2
-                 estado = ENCENDER_LED0;  // Reiniciar la secuencia
+            	 toggleLed_GPIO(LED[secuencia[2]]);  						// Apagar LED 2
+                 estado = ENCENDER_LED0; 									// Reiniciar la secuencia
                  break;
          }
 
