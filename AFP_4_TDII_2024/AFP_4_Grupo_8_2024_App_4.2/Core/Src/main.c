@@ -48,7 +48,7 @@
 /* Private variables ------------------------------------------------------------------------------------------------------------------------------------------*/
 /* USER CODE BEGIN PV */
 uint16_t LED[N]={LD1_Pin, LD2_Pin, LD3_Pin};										//vector de leds
-uint8_t led_actual=0;
+uint8_t led_secuencia1, led_secuencia2;
 delay_t delay;
 uint8_t estado_boton=0;
 uint8_t secuencia=0;																//Numero de secuencia
@@ -110,21 +110,22 @@ int main(void)
 	  if(readKey()){
 		 secuencia=(secuencia+1)%2;													// Cambia entre las 2 secuencias
 		 writeLedOff_GPIO(LED[0] | LED[1] | LED[2]);								// Se apagan todos los leds antes de comenzar una nueva secuencia
-		 led_actual=0;
+		 led_secuencia1=0;
+		 led_secuencia2=N-1;
 	  }
 	  	  switch (secuencia)
 	 	  {
 	 	  	  case 0:																// Secuencia 1 Parpadean en secuencia cada 200ms (verde, azul, rojo)
 	 	          if (delayRead(&delay)){
-	 	        	  toggleLed_GPIO(LED[led_actual]);
-	 	          	  led_actual=(led_actual+1)%N;
+	 	        	  toggleLed_GPIO(LED[led_secuencia1]);
+	 	          	  led_secuencia1=(led_secuencia1+1)%N;
 	 	          }
 	 	  	  	  break;
 
-	 	        case 1:																// Secuencia 2 -> Secuencia 1 Invertida
+	 	       case 1:																// Secuencia 2 -> Secuencia 1 Invertida
 	 	  	  		if (delayRead(&delay)){
-	 	  	  			 toggleLed_GPIO(LED[led_actual]);
-	 	  	  			 led_actual= (led_actual-1+N)%N;
+	 	  	  			 toggleLed_GPIO(LED[led_secuencia2]);
+	 	  	  			 led_secuencia2= (led_secuencia2-1+N)%N;
 	 	  	  		}
 	 	  	  		break;
 

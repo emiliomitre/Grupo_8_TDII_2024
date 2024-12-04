@@ -28,9 +28,9 @@ Drivers/API/Src/API_Debounce.o: ../Drivers/API/Src/API_Debounce.c \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h \
- D:/STM32WorkSpace/Grupo_8_TDII_2024/AFP_4_TDII_2024/AFP_4_Grupo_8_2024_App_4.2/Drivers/API/Inc/API_Debounce.h \
- D:/STM32WorkSpace/Grupo_8_TDII_2024/AFP_4_TDII_2024/AFP_4_Grupo_8_2024_App_4.2/Drivers/API/Inc/API_Delay.h \
- D:/STM32WorkSpace/Grupo_8_TDII_2024/AFP_4_TDII_2024/AFP_4_Grupo_8_2024_App_4.2/Drivers/API/Inc/API_GPIO.h
+ E:/mis\ cosas/Ingenieria/UTN-FRT/OneDrive\ -\ frt.utn.edu.ar/Repos/Grupo_8_TDII_2024/AFP_4_TDII_2024/AFP_4_Grupo_8_2024_App_4.2/Drivers/API/Inc/API_Debounce.h \
+ E:/mis\ cosas/Ingenieria/UTN-FRT/OneDrive\ -\ frt.utn.edu.ar/Repos/Grupo_8_TDII_2024/AFP_4_TDII_2024/AFP_4_Grupo_8_2024_App_4.2/Drivers/API/Inc/API_Delay.h \
+ E:/mis\ cosas/Ingenieria/UTN-FRT/OneDrive\ -\ frt.utn.edu.ar/Repos/Grupo_8_TDII_2024/AFP_4_TDII_2024/AFP_4_Grupo_8_2024_App_4.2/Drivers/API/Inc/API_GPIO.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -61,6 +61,6 @@ Drivers/API/Src/API_Debounce.o: ../Drivers/API/Src/API_Debounce.c \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h:
-D:/STM32WorkSpace/Grupo_8_TDII_2024/AFP_4_TDII_2024/AFP_4_Grupo_8_2024_App_4.2/Drivers/API/Inc/API_Debounce.h:
-D:/STM32WorkSpace/Grupo_8_TDII_2024/AFP_4_TDII_2024/AFP_4_Grupo_8_2024_App_4.2/Drivers/API/Inc/API_Delay.h:
-D:/STM32WorkSpace/Grupo_8_TDII_2024/AFP_4_TDII_2024/AFP_4_Grupo_8_2024_App_4.2/Drivers/API/Inc/API_GPIO.h:
+E:/mis\ cosas/Ingenieria/UTN-FRT/OneDrive\ -\ frt.utn.edu.ar/Repos/Grupo_8_TDII_2024/AFP_4_TDII_2024/AFP_4_Grupo_8_2024_App_4.2/Drivers/API/Inc/API_Debounce.h:
+E:/mis\ cosas/Ingenieria/UTN-FRT/OneDrive\ -\ frt.utn.edu.ar/Repos/Grupo_8_TDII_2024/AFP_4_TDII_2024/AFP_4_Grupo_8_2024_App_4.2/Drivers/API/Inc/API_Delay.h:
+E:/mis\ cosas/Ingenieria/UTN-FRT/OneDrive\ -\ frt.utn.edu.ar/Repos/Grupo_8_TDII_2024/AFP_4_TDII_2024/AFP_4_Grupo_8_2024_App_4.2/Drivers/API/Inc/API_GPIO.h:

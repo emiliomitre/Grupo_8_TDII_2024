@@ -22,7 +22,5 @@ typedef enum{
 bool readKey(void);
 void debounceFSM_init();
 void debounceFSM_update(bool buttonRead);
-void buttonPressed();
-void buttonReleased();
 
 #endif /* API_INC_API_DEBOUNCE_H_ */

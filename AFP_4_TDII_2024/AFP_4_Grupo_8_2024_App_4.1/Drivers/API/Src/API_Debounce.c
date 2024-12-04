@@ -57,7 +57,6 @@ void debounceFSM_update(bool buttonRead){
 		if(delayRead(&debounceDelay)){
 			//Chequear condicion de transición
 			if(buttonRead == true){													// Se presionó boton de usuario
-				buttonPressed();
 				keyPressed = true; 													// Indica tecla presionada luego de 2 lecturas en 40 ms
 				flanco_descendente = true; 												// Asume que en este estado hubo un flanco decendente
 				actualState = BUTTON_DOWN; 											// Pasa al estado siguiente
@@ -81,7 +80,6 @@ void debounceFSM_update(bool buttonRead){
 		if(delayRead(&debounceDelay)){
 			//Chequear condicion de transición
 			if(buttonRead == false){												// El boton de usuario regresó a estado inactivo
-				buttonReleased();
 				keyPressed = false; 												// Indica tecla presionada luego de 2 lecturas en 40 ms
 				actualState = BUTTON_UP; 											// Pasa al estado siguiente, el inicial
 			}
@@ -96,9 +94,4 @@ void debounceFSM_update(bool buttonRead){
 	break;
 	}
 }
-void buttonPressed(void){
-	toggleLed_GPIO(LD1_Pin);
-}
-void buttonReleased(void){
-	toggleLed_GPIO(LD3_Pin);
-}
+
