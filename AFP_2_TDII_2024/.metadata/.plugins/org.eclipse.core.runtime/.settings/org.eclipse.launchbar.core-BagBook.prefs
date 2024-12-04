@@ -1,7 +1,0 @@
-LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
-LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
-LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AFP_1_GRUPO_8_App_1.1 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AFP_1_GRUPO_8_App_1.2 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Ejemplo04_Driver_GPIO
-eclipse.preferences.version=1
-org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AFP_1_GRUPO_8_App_1.1\ Debug/activeLaunchMode=run
-org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:AFP_1_GRUPO_8_App_1.1\ Debug/activeLaunchTarget=null\:---
