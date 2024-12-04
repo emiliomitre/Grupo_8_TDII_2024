@@ -13,12 +13,10 @@
   * in the root directory of this software component.
   * If no LICENSE file comes with this software, it is provided AS-IS.
   *
-  * Descripcion App4.1: Originalmente la app1.1 no hace uso del boton de usuario
-  * de la placa de desarrollo, unicamente tiene 1 secuencia. Para poder implemen
-  * tar la API Antirebote agregaremos una secuencia 2 donde el LED_2 se mantenga
-  * encendido continuamente.
-  *
-  ******************************************************************************
+  * Descripcion App4.2: Desarrolle una aplicacion que utilice el pulsador onboard de la placa de desarrollo para alternar entre dos secuencias diferentes.
+  * La aplicacion inicia con la secuencia de la App1.1 y, cuando se presione el pulsador, dicha secuencia debe invertirse y continuar, de manera que, cada
+  * vez que se presione el pulsador la secuencia actual se invierta. La aplicacion debe ser de caracter general.
+  ***************************************************************************************************************************************************************
   */
 /* USER CODE END Header */
 /* Includes ----------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -50,7 +48,7 @@
 /* Private variables ------------------------------------------------------------------------------------------------------------------------------------------*/
 /* USER CODE BEGIN PV */
 uint16_t LED[N]={LD1_Pin, LD2_Pin, LD3_Pin};										//vector de leds
-int led_actual=0;
+uint8_t led_actual=0;
 delay_t delay;
 uint8_t estado_boton=0;
 uint8_t secuencia=0;																//Numero de secuencia
@@ -74,7 +72,7 @@ bool_t readButton = true;
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-  delayInit(&delay, LED_DELAY);															//200ms
+  delayInit(&delay, LED_DELAY);														//200ms
   /* USER CODE END 1 */
 
   /* MCU Configuration-------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -123,9 +121,10 @@ int main(void)
 	 	          }
 	 	  	  	  break;
 
-	 	        case 1:																// Secuencia 2 Parpadea solo el Led_2 Azul
+	 	        case 1:																// Secuencia 2 -> Secuencia 1 Invertida
 	 	  	  		if (delayRead(&delay)){
-	 	  	  			 toggleLed_GPIO(LED[1]);
+	 	  	  			 toggleLed_GPIO(LED[led_actual]);
+	 	  	  			 led_actual= (led_actual-1+N)%N;
 	 	  	  		}
 	 	  	  		break;
 
