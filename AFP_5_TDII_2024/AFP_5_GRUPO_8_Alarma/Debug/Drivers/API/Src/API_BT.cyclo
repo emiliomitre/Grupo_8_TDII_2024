@@ -1,0 +1,8 @@
+../Drivers/API/Src/API_BT.c:26:6:MX_USART2_UART_Init	2
+../Drivers/API/Src/API_BT.c:61:6:BT_SendMessage	1
+../Drivers/API/Src/API_BT.c:70:6:BT_ReceiveMessage	1
+../Drivers/API/Src/API_BT.c:81:6:BT_Test	1
+../Drivers/API/Src/API_BT.c:95:6:BT_TX	1
+../Drivers/API/Src/API_BT.c:105:6:BT_TX_IT	1
+../Drivers/API/Src/API_BT.c:116:6:HAL_UART_TxCpltCallback	1
+../Drivers/API/Src/API_BT.c:130:6:BT_RX	1

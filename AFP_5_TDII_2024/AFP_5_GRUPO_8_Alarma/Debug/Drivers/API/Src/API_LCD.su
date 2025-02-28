@@ -1,0 +1,10 @@
+../Drivers/API/Src/API_LCD.c:25:6:lcd_init	8	static
+../Drivers/API/Src/API_LCD.c:47:6:lcd_clear	8	static
+../Drivers/API/Src/API_LCD.c:58:6:lcd_set_cursor	24	static
+../Drivers/API/Src/API_LCD.c:68:6:lcd_print	16	static
+../Drivers/API/Src/API_LCD.c:79:6:lcd_print_num	32	static
+../Drivers/API/Src/API_LCD.c:90:13:lcd_send_command	16	static
+../Drivers/API/Src/API_LCD.c:99:13:lcd_send_data	16	static
+../Drivers/API/Src/API_LCD.c:109:13:lcd_send	16	static
+../Drivers/API/Src/API_LCD.c:120:13:lcd_write_nibble	32	static
+../Drivers/API/Src/API_LCD.c:133:6:MX_I2C2_Init	8	static
