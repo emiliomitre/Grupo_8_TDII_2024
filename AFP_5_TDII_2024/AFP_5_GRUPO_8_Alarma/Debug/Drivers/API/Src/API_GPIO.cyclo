@@ -2,4 +2,5 @@
 ../Drivers/API/Src/API_GPIO.c:35:6:writeLedOff_GPIO	1
 ../Drivers/API/Src/API_GPIO.c:45:6:toggleLed_GPIO	1
 ../Drivers/API/Src/API_GPIO.c:49:16:readButton_GPIO	1
-../Drivers/API/Src/API_GPIO.c:59:6:MX_GPIO_Init	1
+../Drivers/API/Src/API_GPIO.c:54:6:BlinkLed_GPIO	1
+../Drivers/API/Src/API_GPIO.c:63:6:MX_GPIO_Init	1

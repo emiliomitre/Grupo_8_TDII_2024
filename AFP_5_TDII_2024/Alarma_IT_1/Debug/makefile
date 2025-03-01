@@ -61,8 +61,8 @@ all: main-build
 main-build: Alarma_IT_1.elf secondary-outputs
 
 # Tool invocations
-Alarma_IT_1.elf Alarma_IT_1.map: $(OBJS) $(USER_OBJS) D:\mis\ cosas\Ingenieria\UTN-FRT\OneDrive\ -\ frt.utn.edu.ar\Repos\AFP_5_GRUPO_8_2024\Alarma_IT_1\STM32F413ZHTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Alarma_IT_1.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\mis cosas\Ingenieria\UTN-FRT\OneDrive - frt.utn.edu.ar\Repos\AFP_5_GRUPO_8_2024\Alarma_IT_1\STM32F413ZHTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Alarma_IT_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Alarma_IT_1.elf Alarma_IT_1.map: $(OBJS) $(USER_OBJS) D:\Mis\ Cosas\Ingenieria\OneDrive\ -\ frt.utn.edu.ar\Repos\AFP_5_GRUPO_8_2024\Alarma_IT_1\STM32F413ZHTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Alarma_IT_1.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Mis Cosas\Ingenieria\OneDrive - frt.utn.edu.ar\Repos\AFP_5_GRUPO_8_2024\Alarma_IT_1\STM32F413ZHTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Alarma_IT_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

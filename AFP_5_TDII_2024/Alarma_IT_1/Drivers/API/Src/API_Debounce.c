@@ -12,7 +12,7 @@
 #include "API_GPIO.h"
 
 /*Defines --------------------------------------------------------------------*/
-#define DEBOUNCE_DELAY 40															// Tiempo necesario para considerar como valido la pulsacion del boton
+#define DEBOUNCE_DELAY 20														// Tiempo necesario para considerar como valido la pulsacion del boton
 
 /*Declaracion de variables */
 static debounceState_t actualState;													// Representa el estado del boton (BUTTON_UP,BUTTON_FALLING, BUTTON_DOWN, BUTTON_RISING)

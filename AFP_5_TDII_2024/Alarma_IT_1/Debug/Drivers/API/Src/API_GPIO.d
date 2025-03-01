@@ -27,10 +27,7 @@ Drivers/API/Src/API_GPIO.o: ../Drivers/API/Src/API_GPIO.c \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
- D:/mis\ cosas/Ingenieria/UTN-FRT/OneDrive\ -\ frt.utn.edu.ar/Repos/AFP_5_GRUPO_8_2024/Alarma_IT_1/Drivers/API/Inc/API_GPIO.h \
- D:/mis\ cosas/Ingenieria/UTN-FRT/OneDrive\ -\ frt.utn.edu.ar/Repos/AFP_5_GRUPO_8_2024/Alarma_IT_1/Drivers/API/Inc/API_Teclado4x3.h \
- D:/mis\ cosas/Ingenieria/UTN-FRT/OneDrive\ -\ frt.utn.edu.ar/Repos/AFP_5_GRUPO_8_2024/Alarma_IT_1/Drivers/API/Inc/API_Delay.h \
- D:/mis\ cosas/Ingenieria/UTN-FRT/OneDrive\ -\ frt.utn.edu.ar/Repos/AFP_5_GRUPO_8_2024/Alarma_IT_1/Drivers/API/Inc/API_Delay.h
+ D:/Mis\ Cosas/Ingenieria/OneDrive\ -\ frt.utn.edu.ar/Repos/AFP_5_GRUPO_8_2024/Alarma_IT_1/Drivers/API/Inc/API_GPIO.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -60,7 +57,4 @@ Drivers/API/Src/API_GPIO.o: ../Drivers/API/Src/API_GPIO.c \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
-D:/mis\ cosas/Ingenieria/UTN-FRT/OneDrive\ -\ frt.utn.edu.ar/Repos/AFP_5_GRUPO_8_2024/Alarma_IT_1/Drivers/API/Inc/API_GPIO.h:
-D:/mis\ cosas/Ingenieria/UTN-FRT/OneDrive\ -\ frt.utn.edu.ar/Repos/AFP_5_GRUPO_8_2024/Alarma_IT_1/Drivers/API/Inc/API_Teclado4x3.h:
-D:/mis\ cosas/Ingenieria/UTN-FRT/OneDrive\ -\ frt.utn.edu.ar/Repos/AFP_5_GRUPO_8_2024/Alarma_IT_1/Drivers/API/Inc/API_Delay.h:
-D:/mis\ cosas/Ingenieria/UTN-FRT/OneDrive\ -\ frt.utn.edu.ar/Repos/AFP_5_GRUPO_8_2024/Alarma_IT_1/Drivers/API/Inc/API_Delay.h:
+D:/Mis\ Cosas/Ingenieria/OneDrive\ -\ frt.utn.edu.ar/Repos/AFP_5_GRUPO_8_2024/Alarma_IT_1/Drivers/API/Inc/API_GPIO.h:

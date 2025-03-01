@@ -25,8 +25,6 @@ bool_t delayRead(delay_t *delay){
 	}
 	return false;
 }
-/*void delayWrite(delay_t *delay, tick_t duration){			//Permite cambiar el tiempo de duracion de un delay existente
+void delayWrite(delay_t *delay, tick_t duration){			//Permite cambiar el tiempo de duracion de un delay existente
 	delay->duration=duration;
-	delay->startTime = HAL_GetTick(); // Reinicia el tiempo de inicio para aplicar el nuevo valor inmediatamente
-}*/
-
+}

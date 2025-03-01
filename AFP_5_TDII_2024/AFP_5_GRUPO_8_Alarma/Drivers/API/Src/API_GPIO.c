@@ -51,6 +51,10 @@ buttonStatus_t readButton_GPIO(void){
 }
 
 
+void BlinkLed_GPIO(uint8_t time){
+	HAL_GPIO_TogglePin(Led_Encendido_GPIO_Port, LDx);
+}
+
 /**
   * @brief GPIO Initialization Function
   * @param None

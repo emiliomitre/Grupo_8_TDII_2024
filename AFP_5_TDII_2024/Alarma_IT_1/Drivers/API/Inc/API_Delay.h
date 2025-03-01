@@ -2,15 +2,14 @@
  * API_Delay.h
  *
  *  Created on: Oct 16, 2024
- *      Author: tomas
+ *      Author: GRUPO_8_TDII_2024
  */
 
-#include <stdbool.h>
+#ifndef API_DELAY_H
+#define API_DELAY_H
+
 #include <stdint.h>
-
-
-#ifndef API_INC_API_DELAY_H_
-#define API_INC_API_DELAY_H_
+#include <stdbool.h>
 
 typedef uint32_t tick_t;
 typedef bool bool_t;
@@ -24,6 +23,4 @@ typedef struct{
 void delayInit(delay_t *delay, tick_t duration);
 bool_t delayRead(delay_t *delay);
 void delayWrite(delay_t *delay, tick_t duration);
-
-
-#endif /* API_INC_API_DELAY_H_ */
+#endif /* API_DELAY_H */

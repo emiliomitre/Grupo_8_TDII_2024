@@ -1,21 +1,28 @@
+/*****************************************************************************************************************
+ * API_LCD.c
+ *
+ *  Created on: -
+ *      Author: GRUPO_8_TDII_2024
+ ******************************************************************************************************************/
 #include "API_LCD.h"
-#include "stm32f4xx_hal.h"
+#include "main.h"
 #include <stdio.h>
 #include <string.h>
-I2C_HandleTypeDef hi2c2; 		// Cambia si configuras otro periférico en CubeMX
-#define LCD_ADDR 0x27        	 // Dirección I2C de la pantalla LCD (modifícala según tu dispositivo)
-
-// Variables internas
+#include <stdio.h>
+/* Private variables ---------------------------------------------------------*/
+extern I2C_HandleTypeDef hi2c2; // Cambia si configuras otro periférico en CubeMX
+/* Private define ------------------------------------------------------------*/
+#define LCD_ADDR 0x27         // Dirección I2C de la pantalla LCD
+/* Private variables ---------------------------------------------------------*/
 static uint8_t lcd_backlight = 0x08;
 static uint8_t lcd_control = 0x00;
 
-// Prototipos de funciones internas
+/* Private function prototypes -----------------------------------------------*/
+void MX_I2C2_Init(void);
 static void lcd_send_command(uint8_t cmd);
 static void lcd_send_data(uint8_t data);
 static void lcd_send(uint8_t value, uint8_t mode);
 static void lcd_write_nibble(uint8_t nibble);
-
-
 /*****************************************************************************************************************
  * @brief: Inicializar la pantalla LCD
  * @param void
@@ -121,31 +128,30 @@ static void lcd_write_nibble(uint8_t nibble) {
   * @retval None
   */
 /******************************************************************************************************************/
-void MX_I2C2_Init(void)
-{
+void MX_I2C2_Init(void){
 
-  /* USER CODE BEGIN I2C2_Init 0 */
+	  /* USER CODE BEGIN I2C2_Init 0 */
 
-  /* USER CODE END I2C2_Init 0 */
+	  /* USER CODE END I2C2_Init 0 */
 
-  /* USER CODE BEGIN I2C2_Init 1 */
+	  /* USER CODE BEGIN I2C2_Init 1 */
 
-  /* USER CODE END I2C2_Init 1 */
-  hi2c2.Instance = I2C2;
-  hi2c2.Init.ClockSpeed = 100000;
-  hi2c2.Init.DutyCycle = I2C_DUTYCYCLE_2;
-  hi2c2.Init.OwnAddress1 = 0;
-  hi2c2.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
-  hi2c2.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
-  hi2c2.Init.OwnAddress2 = 0;
-  hi2c2.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
-  hi2c2.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
-  if (HAL_I2C_Init(&hi2c2) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN I2C2_Init 2 */
+	  /* USER CODE END I2C2_Init 1 */
+	  hi2c2.Instance = I2C2;
+	  hi2c2.Init.ClockSpeed = 100000;
+	  hi2c2.Init.DutyCycle = I2C_DUTYCYCLE_2;
+	  hi2c2.Init.OwnAddress1 = 0;
+	  hi2c2.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+	  hi2c2.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+	  hi2c2.Init.OwnAddress2 = 0;
+	  hi2c2.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+	  hi2c2.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+	  if (HAL_I2C_Init(&hi2c2) != HAL_OK)
+	  {
+	    Error_Handler();
+	  }
+	  /* USER CODE BEGIN I2C2_Init 2 */
 
-  /* USER CODE END I2C2_Init 2 */
+	  /* USER CODE END I2C2_Init 2 */
 
 }

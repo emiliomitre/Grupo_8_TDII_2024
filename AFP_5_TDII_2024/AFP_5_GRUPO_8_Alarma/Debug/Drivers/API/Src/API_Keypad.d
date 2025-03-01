@@ -1,5 +1,5 @@
 Drivers/API/Src/API_Keypad.o: ../Drivers/API/Src/API_Keypad.c \
- D:/mis\ cosas/Ingenieria/UTN-FRT/OneDrive\ -\ frt.utn.edu.ar/Repos/AFP_5_GRUPO_8_2024/AFP_5_GRUPO_8_Alarma/Drivers/API/Inc/API_Keypad.h \
+ D:/Mis\ Cosas/Ingenieria/OneDrive\ -\ frt.utn.edu.ar/Repos/AFP_5_GRUPO_8_2024/AFP_5_GRUPO_8_Alarma/Drivers/API/Inc/API_Keypad.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -28,7 +28,7 @@ Drivers/API/Src/API_Keypad.o: ../Drivers/API/Src/API_Keypad.c \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
-D:/mis\ cosas/Ingenieria/UTN-FRT/OneDrive\ -\ frt.utn.edu.ar/Repos/AFP_5_GRUPO_8_2024/AFP_5_GRUPO_8_Alarma/Drivers/API/Inc/API_Keypad.h:
+D:/Mis\ Cosas/Ingenieria/OneDrive\ -\ frt.utn.edu.ar/Repos/AFP_5_GRUPO_8_2024/AFP_5_GRUPO_8_Alarma/Drivers/API/Inc/API_Keypad.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:

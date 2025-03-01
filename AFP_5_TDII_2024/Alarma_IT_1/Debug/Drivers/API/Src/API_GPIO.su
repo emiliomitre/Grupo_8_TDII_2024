@@ -2,10 +2,5 @@
 ../Drivers/API/Src/API_GPIO.c:35:6:writeLedOff_GPIO	16	static
 ../Drivers/API/Src/API_GPIO.c:45:6:toggleLed_GPIO	16	static
 ../Drivers/API/Src/API_GPIO.c:49:16:readButton_GPIO	8	static
-../Drivers/API/Src/API_GPIO.c:58:6:SystemClock_Config	88	static
-../Drivers/API/Src/API_GPIO.c:105:6:MX_GPIO_Init	64	static
-../Drivers/API/Src/API_GPIO.c:201:6:enableKeypadInterrupts	8	static
-../Drivers/API/Src/API_GPIO.c:212:6:disableKeypadInterrupts	8	static
-../Drivers/API/Src/API_GPIO.c:223:6:enableSensorInterrupts	8	static
-../Drivers/API/Src/API_GPIO.c:231:6:disableSensorInterrupts	8	static
-../Drivers/API/Src/API_GPIO.c:240:6:HAL_GPIO_EXTI_Callback	16	static
+../Drivers/API/Src/API_GPIO.c:56:6:SystemClock_Config	88	static
+../Drivers/API/Src/API_GPIO.c:102:6:MX_GPIO_Init	64	static

@@ -9,6 +9,7 @@
 "./Drivers/API/Src/API_Debounce.o"
 "./Drivers/API/Src/API_Delay.o"
 "./Drivers/API/Src/API_GPIO.o"
+"./Drivers/API/Src/API_Keypad.o"
 "./Drivers/API/Src/API_LCD.o"
 "./Drivers/API/Src/API_Teclado4x3.o"
 "./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
